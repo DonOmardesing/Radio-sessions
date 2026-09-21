@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don Omar Radio Medellín</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;min-height:100%;background:#000;font-family:Arial,Helvetica,sans-serif}
+body{display:flex;justify-content:center;align-items:flex-start}
+.pagina{width:100%;max-width:1100px;min-height:100vh;background:#000;overflow:hidden}
+.portada{position:relative;width:100%;aspect-ratio:1024/1536;background-image:url("https://i.postimg.cc/hvjcc8v9/IMG-7088.jpg");background-size:cover;background-position:center;background-repeat:no-repeat}
+.zona{position:absolute;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;cursor:pointer;z-index:20;border-radius:10px;background:transparent;transition:transform .25s ease,background .25s ease}
+.zona:hover{transform:scale(1.035);background:rgba(0,0,0,.12)}
+.zona:active{transform:scale(.98)}
+.nombre{position:absolute;min-width:150px;max-width:240px;padding:9px 14px;text-align:center;color:#fff;font-size:clamp(10px,1.25vw,16px);font-weight:700;line-height:1.15;letter-spacing:.03em;background:rgba(5,8,12,.88);border:1px solid rgba(255,255,255,.35);border-radius:7px;text-shadow:0 1px 2px #000,0 0 5px #000;box-shadow:0 4px 14px rgba(0,0,0,.45);backdrop-filter:blur(3px)}
+.radio24{left:20%;top:56%;width:30%;height:10%}
+.sessions{left:56%;top:56%;width:30%;height:10%}
+.playlist{left:20%;top:69%;width:30%;height:10%}
+.seguridad{left:56%;top:69%;width:30%;height:10%}
+.videos{left:20%;top:82%;width:30%;height:10%}
+.comunidad{left:56%;top:82%;width:30%;height:10%}
+footer{width:100%;background:#050505;color:#bdbdbd;text-align:center;padding:18px 10px 22px;font-size:12px;letter-spacing:.06em;border-top:1px solid rgba(255,255,255,.12)}
+footer strong{display:block;color:#fff;margin-bottom:6px;font-size:13px}
+@media(max-width:600px){.nombre{min-width:0;width:92%;max-width:180px;padding:7px 5px;font-size:10px}}
+</style>
+</head>
+<body>
+<div class="pagina">
+<main class="portada">
+<a class="zona radio24" href="https://don-omar-radio-medellin.s-mora14.chatgpt.site/" aria-label="6 radios en vivo 24/7"><span class="nombre">6 radios en vivo 24/7</span></a>
+<a class="zona sessions" href="sessions.html" aria-label="Don Omar Radio Sessions"><span class="nombre">Don Omar Radio Sessions</span></a>
+<a class="zona playlist" href="https://open.spotify.com/user/31ayh7eqvgueiw4xuufzokzxrmey?si=xntfPnuWQbyHrrtSn8GojQ&utm_source=copy-link" target="_blank" rel="noopener noreferrer" aria-label="Playlist selectas"><span class="nombre">Playlist selectas</span></a>
+<a class="zona seguridad" href="seguridad-digital.html" aria-label="Seguridad digital"><span class="nombre">Seguridad digital</span></a>
+<a class="zona videos" href="videos-80s-90s.html" aria-label="Videos 80s y 90s"><span class="nombre">Videos 80s y 90s</span></a>
+<a class="zona comunidad" href="comunidad.html" aria-label="Comunidad"><span class="nombre">Comunidad</span></a>
+</main>
+<footer><strong>Don Omar Radio Medellín</strong>Todos los derechos reservados</footer>
+</div>
+</body>
+</html>
