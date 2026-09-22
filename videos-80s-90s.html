@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Don Omar Radio Sessions | Baladas Rockeras</title>
+
+<style>
+
+/* =====================================================
+   BASE
+===================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    min-height:100%;
+}
+
+body{
+
+    background:
+        radial-gradient(
+            ellipse at 50% 18%,
+            rgba(0,180,255,.18),
+            transparent 34%
+        ),
+        radial-gradient(
+            ellipse at 15% 55%,
+            rgba(60,0,150,.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 90% 60%,
+            rgba(180,0,60,.13),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #02080d 0%,
+            #030b12 38%,
+            #08030c 72%,
+            #020204 100%
+        );
+
+    color:#fff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   AMBIENTE DE LUZ
+===================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(0,200,255,.035) 25%,
+            transparent 50%,
+            rgba(255,0,70,.035) 75%,
+            transparent 100%
+        );
+
+    z-index:-1;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.page{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:
+        28px
+        18px
+        55px;
+}
+
+
+/* =====================================================
+   CABECERA
+===================================================== */
+
+.header{
+
+    text-align:center;
+
+    padding:
+        10px
+        5px
+        15px;
+}
+
+
+.brand{
+
+    font-size:
+        clamp(
+            42px,
+            7vw,
+            76px
+        );
+
+    line-height:.95;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    color:#f5fbff;
+
+    text-shadow:
+
+        0 0 5px #fff,
+
+        0 0 12px #bdefff,
+
+        0 0 25px #00bfff,
+
+        0 0 50px rgba(0,160,255,.75);
+
+}
+
+
+.brand span{
+
+    color:#00cfff;
+
+    text-shadow:
+
+        0 0 8px #00d9ff,
+
+        0 0 20px #008cff,
+
+        0 0 40px rgba(0,160,255,.8);
+}
+
+
+.good{
+
+    margin-top:18px;
+
+    font-size:
+        clamp(
+            14px,
+            2.2vw,
+            22px
+        );
+
+    font-weight:700;
+
+    letter-spacing:
+        clamp(
+            4px,
+            1vw,
+            9px
+        );
+
+    color:#f5f5f5;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.5);
+}
+
+
+.rock{
+
+    margin-top:12px;
+
+    font-size:
+        clamp(
+            18px,
+            3vw,
+            30px
+        );
+
+    font-weight:900;
+
+    letter-spacing:
+        clamp(
+            3px,
+            .8vw,
+            7px
+        );
+
+    color:#ff3658;
+
+    text-shadow:
+
+        0 0 8px #ff3150,
+
+        0 0 20px #ff1745,
+
+        0 0 40px rgba(255,0,60,.55);
+}
+
+
+/* =====================================================
+   CARTEL LUMINOSO
+===================================================== */
+
+.neon-sign{
+
+    position:relative;
+
+    margin:
+        42px auto
+        28px;
+
+    width:100%;
+
+    min-height:155px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-top:
+        2px solid #00d9ff;
+
+    border-bottom:
+        2px solid #00d9ff;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0,130,255,.05),
+            rgba(60,0,130,.10),
+            rgba(255,0,60,.06)
+        );
+
+    box-shadow:
+
+        0 0 8px rgba(0,220,255,.8),
+
+        0 0 28px rgba(0,150,255,.35),
+
+        inset 0 12px 30px rgba(0,150,255,.05),
+
+        inset 0 -12px 30px rgba(255,0,80,.04);
+
+}
+
+
+/* pequeñas luces del cartel */
+
+.neon-sign::before,
+.neon-sign::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:
+        0 0 6px #fff,
+        0 0 14px #00d9ff,
+        0 0 25px #00d9ff;
+}
+
+.neon-sign::before{
+    left:22px;
+    top:-5px;
+}
+
+.neon-sign::after{
+    right:22px;
+    bottom:-5px;
+}
+
+
+.sign-small{
+
+    font-size:
+        clamp(
+            15px,
+            2vw,
+            21px
+        );
+
+    font-weight:800;
+
+    letter-spacing:
+        clamp(
+            5px,
+            1vw,
+            10px
+        );
+
+    color:#ffd33d;
+
+    text-shadow:
+
+        0 0 7px #ffd000,
+
+        0 0 18px #ffb700,
+
+        0 0 32px rgba(255,170,0,.65);
+}
+
+
+.sign-big{
+
+    margin-top:7px;
+
+    font-size:
+        clamp(
+            34px,
+            6vw,
+            64px
+        );
+
+    line-height:1;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    color:#fff;
+
+    text-shadow:
+
+        0 0 5px #fff,
+
+        0 0 12px #bff6ff,
+
+        0 0 24px #00cfff,
+
+        0 0 48px #008cff;
+}
+
+
+.sign-description{
+
+    margin-top:12px;
+
+    font-size:
+        clamp(
+            13px,
+            2vw,
+            20px
+        );
+
+    font-weight:800;
+
+    letter-spacing:
+        clamp(
+            2px,
+            .6vw,
+            5px
+        );
+
+    color:#00d9ff;
+
+    text-shadow:
+
+        0 0 7px #00d9ff,
+
+        0 0 18px #008cff;
+}
+
+
+/* =====================================================
+   TEXTO COLECCIÓN
+===================================================== */
+
+.collection{
+
+    text-align:center;
+
+    margin:
+        30px auto
+        24px;
+}
+
+
+.collection-title{
+
+    font-size:
+        clamp(
+            21px,
+            3.5vw,
+            34px
+        );
+
+    font-weight:900;
+
+    letter-spacing:
+        clamp(
+            2px,
+            .6vw,
+            5px
+        );
+
+    color:#fff;
+
+    text-shadow:
+
+        0 0 7px #fff,
+
+        0 0 16px #ff3658,
+
+        0 0 30px rgba(255,0,60,.55);
+}
+
+
+.collection-sub{
+
+    margin-top:10px;
+
+    font-size:
+        clamp(
+            14px,
+            2vw,
+            18px
+        );
+
+    letter-spacing:3px;
+
+    color:#bbb;
+}
+
+
+/* =====================================================
+   YOUTUBE
+===================================================== */
+
+.video-container{
+
+    width:100%;
+
+    max-width:1000px;
+
+    margin:
+        25px auto
+        0;
+
+    padding:6px;
+
+    border:
+        2px solid #00d9ff;
+
+    border-radius:20px;
+
+    background:#000;
+
+    box-shadow:
+
+        0 0 10px #00d9ff,
+
+        0 0 25px rgba(0,180,255,.65),
+
+        0 0 55px rgba(0,80,255,.25);
+}
+
+
+.video{
+
+    display:block;
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    border:0;
+
+    border-radius:13px;
+
+    background:#000;
+}
+
+
+/* =====================================================
+   FRASE PRINCIPAL
+===================================================== */
+
+.rock-message{
+
+    text-align:center;
+
+    margin:
+        32px auto
+        20px;
+
+    font-size:
+        clamp(
+            18px,
+            3vw,
+            29px
+        );
+
+    font-weight:800;
+
+    letter-spacing:
+        clamp(
+            2px,
+            .5vw,
+            5px
+        );
+
+    color:#fff;
+
+    text-shadow:
+
+        0 0 7px #fff,
+
+        0 0 18px #ff3050;
+}
+
+
+/* =====================================================
+   DON OMAR RADIO SESSIONS
+===================================================== */
+
+.sessions{
+
+    text-align:center;
+
+    font-size:
+        clamp(
+            14px,
+            2vw,
+            19px
+        );
+
+    font-weight:800;
+
+    letter-spacing:
+        clamp(
+            3px,
+            .8vw,
+            7px
+        );
+
+    color:#ffd33d;
+
+    text-shadow:
+
+        0 0 7px #ffd000,
+
+        0 0 18px #ffb000,
+
+        0 0 30px rgba(255,180,0,.55);
+}
+
+
+/* =====================================================
+   VOLVER
+===================================================== */
+
+.back{
+
+    display:block;
+
+    width:max-content;
+
+    margin:
+        35px auto
+        0;
+
+    padding:
+        11px
+        24px;
+
+    border:
+        1px solid #00d9ff;
+
+    border-radius:30px;
+
+    color:#00d9ff;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    box-shadow:
+
+        0 0 10px rgba(0,210,255,.5),
+
+        inset 0 0 10px rgba(0,210,255,.06);
+}
+
+
+.back:hover{
+
+    box-shadow:
+
+        0 0 18px rgba(0,210,255,.9),
+
+        inset 0 0 18px rgba(0,210,255,.12);
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media(max-width:600px){
+
+    .page{
+
+        padding:
+            18px
+            10px
+            40px;
+    }
+
+
+    .header{
+
+        padding-top:4px;
+    }
+
+
+    .neon-sign{
+
+        min-height:135px;
+
+        margin-top:30px;
+    }
+
+
+    .sign-small{
+
+        letter-spacing:4px;
+    }
+
+
+    .sign-big{
+
+        letter-spacing:1px;
+    }
+
+
+    .sign-description{
+
+        letter-spacing:2px;
+
+        padding:
+            0 8px;
+    }
+
+
+    .collection{
+
+        margin-top:27px;
+    }
+
+
+    .video-container{
+
+        padding:4px;
+
+        border-radius:16px;
+    }
+
+
+    .video{
+
+        border-radius:10px;
+    }
+
+
+    .rock-message{
+
+        line-height:1.25;
+
+        padding:
+            0 8px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- ==============================
+         CABECERA
+    =============================== -->
+
+    <header class="header">
+
+        <div class="brand">
+            Don Omar <span>Radio</span>
+        </div>
+
+        <div class="good">
+            GOOD MUSIC NO LIMITS
+        </div>
+
+        <div class="rock">
+            ROCK NEVER DIES
+        </div>
+
+    </header>
+
+
+
+    <!-- ==============================
+         CARTEL PRINCIPAL
+    =============================== -->
+
+    <section class="neon-sign">
+
+        <div class="sign-small">
+            AQUI
+        </div>
+
+        <div class="sign-big">
+            100 VIDEOS
+        </div>
+
+        <div class="sign-description">
+            RECOMENDADOS DE BALADAS ROCKERAS
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         COLECCIÓN
+    =============================== -->
+
+    <section class="collection">
+
+        <div class="collection-title">
+            PRÓXIMAMENTE OTRA COLECCIÓN
+        </div>
+
+        <div class="collection-sub">
+            DON OMAR RADIO SESSIONS
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         YOUTUBE
+    =============================== -->
+
+    <div class="video-container">
+
+        <iframe
+            class="video"
+            src="https://www.youtube.com/embed/videoseries?list=PLJTxnI8yX9ye3s6w4p1BsLdsFCOd62tqb"
+            title="Don Omar Radio Sessions - Baladas Rockeras"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+
+    <!-- ==============================
+         TEXTO INFERIOR
+    =============================== -->
+
+    <div class="rock-message">
+        BALADAS ROCKERAS DE TODOS LOS TIEMPOS
+    </div>
+
+    <div class="sessions">
+        DON OMAR RADIO SESSIONS
+    </div>
+
+
+
+    <!-- ==============================
+         VOLVER
+    =============================== -->
+
+    <a
+        class="back"
+        href="https://donomardesing.github.io/Radio-sessions/">
+
+        ← Volver a Radio Sessions
+
+    </a>
+
+
+</div>
+
+
+</body>
+</html>
