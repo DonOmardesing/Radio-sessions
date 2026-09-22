@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Don Omar Radio Medellín</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    background:#000;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.pagina{
+    width:100%;
+    max-width:1024px;
+    background:#000;
+    overflow:hidden;
+}
+
+.portada{
+    position:relative;
+    width:100%;
+
+    /* PROPORCIÓN REAL DE LA IMAGEN: 1024 x 1536 */
+    aspect-ratio:1024 / 1536;
+
+    background-image:url("https://i.postimg.cc/G2CT27sL/21FFF5E5-AC61-44F8-9A89-B84B73822EF2.png");
+
+    background-size:100% 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+/* 
+   ZONAS INVISIBLES CLICKEABLES.
+   NO agregamos bordes porque los botones
+   ya están dibujados dentro de la imagen.
+*/
+
+.zona{
+    position:absolute;
+    display:block;
+
+    background:transparent;
+    border:none;
+    outline:none;
+
+    cursor:pointer;
+    z-index:20;
+
+    -webkit-tap-highlight-color:transparent;
+
+    transition:
+        transform .12s ease,
+        filter .12s ease;
+}
+
+
+/* Primera fila */
+
+.radio24{
+    left:3%;
+    top:70.2%;
+    width:30.8%;
+    height:8.7%;
+}
+
+.envivo{
+    left:34.7%;
+    top:70.2%;
+    width:30.8%;
+    height:8.7%;
+}
+
+.playlist{
+    left:67%;
+    top:70.2%;
+    width:30%;
+    height:8.7%;
+}
+
+
+/* Segunda fila */
+
+.seguridad{
+    left:3%;
+    top:81.2%;
+    width:30.8%;
+    height:8.7%;
+}
+
+.videos{
+    left:34.7%;
+    top:81.2%;
+    width:30.8%;
+    height:8.7%;
+}
+
+.comunidad{
+    left:67%;
+    top:81.2%;
+    width:30%;
+    height:8.7%;
+}
+
+
+/* Efecto táctil al tocar */
+
+.zona:active{
+    transform:scale(.97);
+
+    filter:
+        brightness(1.35)
+        drop-shadow(0 0 8px rgba(0,180,255,.9));
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="pagina">
+
+<main class="portada">
+
+    <!-- 6 RADIOS EN VIVO -->
+    <a
+        class="zona radio24"
+        href="https://don-omar-radio-medellin.s-mora14.chatgpt.site/"
+        aria-label="6 radios en vivo 24/7">
+    </a>
+
+
+    <!-- EN VIVO -->
+    <a
+        class="zona envivo"
+        href="en-vivo.html"
+        aria-label="En vivo">
+    </a>
+
+
+    <!-- PLAYLIST -->
+    <a
+        class="zona playlist"
+        href="https://open.spotify.com/user/31ayh7eqvgueiw4xuufzokzxrmey?si=xntfPnuWQbyHrrtSn8GojQ&utm_source=copy-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Playlist selectas">
+    </a>
+
+
+    <!-- SEGURIDAD DIGITAL -->
+    <a
+        class="zona seguridad"
+        href="seguridad-digital.html"
+        aria-label="Seguridad digital">
+    </a>
+
+
+    <!-- VIDEOS 80s Y 90s -->
+    <a
+        class="zona videos"
+        href="videos-80s-90s.html"
+        aria-label="Videos 80s y 90s">
+    </a>
+
+
+    <!-- COMUNIDAD -->
+    <a
+        class="zona comunidad"
+        href="https://chat.whatsapp.com/CN6gqGTeo1vAFBmoQTvoJ0?mode=gi_t"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Comunidad Oyentes VIP">
+    </a>
+
+</main>
+
+</div>
+
+</body>
+</html>
