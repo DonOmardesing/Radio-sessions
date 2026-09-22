@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>En Vivo | Don Omar Radio</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+    min-height:100%;
+    background:#050505;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    text-align:center;
+}
+
+.wrap{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding:28px 14px 40px;
+}
+
+/* INDICADOR EN VIVO */
+
+.live{
+    display:inline-block;
+    padding:10px 20px;
+    border:1px solid #ff3030;
+    border-radius:30px;
+    color:#ff4b4b;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+/* TARJETA */
+
+.card{
+    margin-top:20px;
+    background:#111;
+    border:1px solid #252525;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 0 24px rgba(0,180,255,.12);
+}
+
+h1{
+    margin:0 0 8px;
+    font-size:26px;
+}
+
+.status{
+    margin:0 0 18px;
+    color:#aaa;
+    font-size:14px;
+}
+
+/* REPRODUCTOR TWITCH */
+
+.player{
+    position:relative;
+    width:100%;
+    aspect-ratio:16 / 9;
+    background:#000;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.player iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* INSTRUCCIÓN */
+
+.note{
+    margin:16px 0 0;
+    color:#aaa;
+    font-size:14px;
+    line-height:1.45;
+}
+
+/* BOTÓN VOLVER */
+
+.back{
+    display:inline-block;
+    margin-top:24px;
+    color:#aaa;
+    text-decoration:none;
+}
+
+.back:hover{
+    color:#fff;
+}
+
+/* CELULARES */
+
+@media(max-width:600px){
+
+    .wrap{
+        padding:22px 10px 34px;
+    }
+
+    .card{
+        padding:14px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <div class="live">
+        ● EN VIVO
+    </div>
+
+    <div class="card">
+
+        <h1>Don Omar Radio</h1>
+
+        <p class="status">
+            Transmisión en vivo
+        </p>
+
+        <!-- TWITCH EMBEBIDO -->
+
+        <div class="player">
+
+            <iframe
+                src="https://player.twitch.tv/?channel=donomar_radio_medellin&parent=donomardesing.github.io&layout=video"
+                allowfullscreen
+                scrolling="no"
+                title="Don Omar Radio en vivo">
+            </iframe>
+
+        </div>
+
+        <p class="note">
+            Toca ▶ dentro del reproductor para comenzar a escuchar.
+        </p>
+
+    </div>
+
+    <a class="back" href="index.html">
+        ← Volver a Radio Sessions
+    </a>
+
+</div>
+
+</body>
+</html>
