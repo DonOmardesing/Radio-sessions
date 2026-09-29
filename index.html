@@ -179,7 +179,10 @@ function makeSlide(item){
   slide.querySelector('.listen-main').onclick=()=>window.open(item.url,'_blank');
   fetch('https://open.spotify.com/oembed?url='+encodeURIComponent(item.url))
     .then(r=>r.ok?r.json():Promise.reject())
-    .then(data=>{if(data.thumbnail_url) img.src=data.thumbnail_url;})
+    .then(data=>{
+  if(data.thumbnail_url) img.src=data.thumbnail_url;
+  if(data.title) slide.querySelector('.carousel-name').textContent=data.title;
+})
     .catch(()=>{});
   return slide;
 }
