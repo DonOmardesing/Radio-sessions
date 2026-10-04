@@ -93,27 +93,65 @@ body{
   max-width:600px;
 }
 
-/* VIDEO */
+/* BOTÓN YOUTUBE */
 
-.video-box{
+.youtube-box{
   width:100%;
   background:#020508;
   border:2px solid #078cff;
   border-radius:20px;
-  padding:5px;
+  padding:35px 20px;
   box-shadow:
     0 0 10px rgba(0,140,255,.75),
     0 0 30px rgba(0,100,255,.28),
     inset 0 0 20px rgba(0,120,255,.10);
+  text-align:center;
 }
 
-.video-frame{
+.youtube-icon{
+  font-size:54px;
+  margin-bottom:15px;
+  text-shadow:0 0 18px rgba(255,0,0,.45);
+}
+
+.youtube-title{
+  color:#fff;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-bottom:8px;
+}
+
+.youtube-description{
+  color:#aebbc7;
+  font-size:12px;
+  line-height:1.5;
+  margin-bottom:25px;
+}
+
+.youtube-play{
+  display:flex;
+  align-items:center;
+  justify-content:center;
   width:100%;
-  aspect-ratio:16 / 9;
-  display:block;
-  border:0;
-  border-radius:14px;
-  background:#000;
+  max-width:430px;
+  margin:0 auto;
+  padding:17px 20px;
+  border-radius:999px;
+  background:#fff;
+  color:#000;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:900;
+  letter-spacing:1px;
+  box-shadow:
+    0 0 18px rgba(255,255,255,.25),
+    0 0 30px rgba(0,132,255,.35);
+  transition:.15s ease;
+}
+
+.youtube-play:active{
+  transform:scale(.96);
 }
 
 /* TEXTO INFERIOR */
@@ -133,6 +171,7 @@ body{
 .back{
   display:flex;
   width:max-content;
+  max-width:100%;
   margin:0 auto;
   padding:12px 22px;
   border:1px solid #00aaff;
@@ -187,13 +226,13 @@ body{
     padding:0 8px;
   }
 
-  .video-box{
+  .youtube-box{
     border-radius:17px;
-    padding:4px;
+    padding:30px 15px;
   }
 
-  .video-frame{
-    border-radius:12px;
+  .youtube-play{
+    font-size:16px;
   }
 }
 </style>
@@ -206,8 +245,7 @@ body{
   <header class="header">
     <img
       src="822acf96-fd61-46a2-ad42-239a8b8c1237.jpeg"
-      alt="Don Omar Radio Sessions"
-    >
+      alt="Don Omar Radio Sessions">
   </header>
 
   <main class="content">
@@ -220,15 +258,25 @@ body{
       Porque marcaron nuestra época dorada del rock.
     </p>
 
-    <div class="video-box">
+    <div class="youtube-box">
 
-      <iframe
-        class="video-frame"
-        src="https://www.youtube.com/embed/?list=PLafKh5hA5TEmNIMSdJst37tqMJYXB4AS9"
-        title="Don Omar Radio Sessions — Videos recomendados"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <div class="youtube-icon">▶</div>
+
+      <div class="youtube-title">
+        COLECCIÓN DE VIDEOS
+      </div>
+
+      <div class="youtube-description">
+        238 videos seleccionados para disfrutar directamente en YouTube.
+      </div>
+
+      <a
+        class="youtube-play"
+        href="https://youtube.com/playlist?list=PLafKh5hA5TEmNIMSdJst37tqMJYXB4AS9"
+        target="_blank"
+        rel="noopener">
+        ▶ &nbsp; REPRODUCIR VIDEOS
+      </a>
 
     </div>
 
